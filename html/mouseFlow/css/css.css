@@ -1,0 +1,21 @@
+*{margin: 0;padding: 0;list-style: none;text-decoration: none;color: #000;}
+
+
+.demoJs{width: 1200px;height: 100%;position: absolute;right: 0;top: 0;
+	background: #aaa; overflow: hidden;}
+
+/* DEMO  */
+.jsBox{width: 620px;height: 510px;position: absolute;right: 30%;top: 100px;
+	z-index: 50;}
+.jsDemo{width: 620px;height: 510px;position: relative;}
+.jsDemo li{width: 180px;height: 150px;background: blue;font-size: 30px;text-align: center;
+	line-height: 150px;float: left;margin: 15px 0 0 20px;position: relative;overflow: hidden;
+	border-radius: 20px;box-shadow: 0 0 20px #fff;}
+.jsDemo li span{width: 100%;height: 100%;position: absolute;left: -180px;top: 0;cursor: pointer;
+		background: #E9A738;font-size: 30px;opacity: 0.5;text-align: center;line-height: 150px;
+		border-radius: 20px;font-weight: bold;color: #000;}
+.jsDemo li img{width: 180px;height: 150px;}
+.cc{
+	width: 150px;font-size: 130px;
+}
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>apple menu</title>
+<style>
+	*{ padding:0; margin:0; list-style:none;}
+	body{background: url(img/bg.jpg) no-repeat 150px 0;}
+	.box{ position:absolute; bottom:0; text-align:center; width:100%;}
+	img{ width:64px;}
+</style>
+<script>
+	window.onload=function(){
+		var oBox=document.getElementById('box');
+		var aImg=oBox.children;
+		document.onmousemove=function(ev){
+			var oEvent=ev||event;
+			var cX=oEvent.clientX;
+			var cY=oEvent.clientY;
+			
+			for(var i=0;i<aImg.length;i++){
+				var oImgCt=aImg[i].offsetTop+oBox.offsetTop+aImg[i].offsetHeight/2;
+				var oImgCl=aImg[i].offsetLeft+aImg[i].offsetWidth/2;
+				
+				var a=oImgCl-cX;
+				var b=oImgCt-cY;
+				var c=Math.sqrt(a*a+b*b);
+				
+				var scale=1-c/500;
+				if(scale<0.5)scale=0.5;
+				
+				aImg[i].style.width=128*scale+'px';
+				
+			}
+			
+					
+		};	
+	};
+</script>
+</head>
+
+<body>
+	<div class="box" id="box">
+    	<img src="img/1.png" />
+        <img src="img/2.png" />
+        <img src="img/3.png" />
+        <img src="img/4.png" />
+        <img src="img/5.png" />
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+

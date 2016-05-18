@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Pic roll</title>
+<style>
+	*{ padding:0; margin:0; list-style:none;}
+	body{ overflow:hidden;}
+	body{ background:#000;}
+	ul{ width:133px; height:200px; position:absolute; top:30%; left:50%; margin-top:-100px; margin-left:-67px; transform-style:preserve-3d;
+	transform:perspective(800px) translateZ(-400px) rotateX(-15deg);}
+	li{ 
+	width:133px;
+	height:200px;
+	color:#FFF;
+	-webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,0.5)); box-shadow:0 0 20px #FFF;
+	position:absolute; top:0; left:0;}
+	/*ul:active li{
+		transform:perspective(800px) rotateY(60deg) translateZ(200px);
+		
+	}*/
+</style>
+<script>
+	window.onload=function(){
+		var oList=document.querySelector('#list');
+		
+		var N=11;
+		for(var i=0; i<N;i++){
+			var oLi=document.createElement('li');
+				oLi.style.backgroundImage='url(img2/'+(i+1)+'.jpg)';
+				oList.appendChild(oLi);
+				
+				oLi.style.transition='0.5s all ease '+100*(N-i)+'ms';
+				
+				(function(oLi,i){setTimeout(function(){
+					oLi.style.transform='perspective(800px) rotateY('+360/N*i+'deg) translateZ(300px)';	
+				},0)})(oLi,i);
+		}	
+		
+		var aLi=oList.children;
+		var y=0;
+		
+		aLi[0].addEventListener('transitionend',function(){
+			change();
+		},false);
+		
+		//键盘控制
+		document.onkeydown=function(ev){
+			switch(ev.keyCode){
+				case 37:
+					y-=360/N;
+					change()
+				break;
+				case 39:
+					y+=360/N;
+					change()
+				break;		
+			}	
+		};
+		
+		//鼠标控制
+		var lastX=0;
+		var iSpeedX=0;
+		var timer=null;
+		
+		document.onmousedown=function(ev){
+			var disX=ev.clientX-y;
+			
+			clearInterval(timer);
+			for(var i=0; i<aLi.length;i++){
+				aLi[i].style.transition='none';
+			}
+			
+			
+			document.onmousemove=function(ev){
+				y=ev.clientX-disX;
+				change(y/3);
+				
+				iSpeedX=ev.clientX-lastX;
+
+				lastX=ev.clientX;		
+			};
+			document.onmouseup=function(){
+				document.onmousemove=null;
+				document.onmouseup=	null;
+				
+				timer=setInterval(function(){
+					iSpeedX*=0.95;
+					y+=iSpeedX;
+					
+					change(y/3);
+						
+				},30);
+					
+			};
+			return false;
+		};
+		
+		function change(y){
+			for(var i=0; i<aLi.length;i++){
+				
+				//aLi[i].style.transition='1s all ease';
+				aLi[i].style.transform='perspective(800px) rotateY('+(360/N*i+y)+'deg) translateZ(300px)';
+				
+				
+var scale=Math.abs(Math.abs((360/N*i+y)%360)-180)/180;
+				
+				//aLi[i].innerHTML=scale;
+				scale<0.3&&(scale=0.3)
+				
+				aLi[i].style.opacity=scale;
+				
+			}
+		}
+	};
+</script>
+</head>
+
+<body>
+	<ul id="list">
+    	
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+

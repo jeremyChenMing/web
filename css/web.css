@@ -1,0 +1,83 @@
+*{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+/* 背景CSS设置 */
+.loading{width: 100%;height: 100%;animation: 3s loading forwards;}
+/* 修改此处  1-0*/
+@-webkit-keyframes loading{ 
+	0% { opacity: 0; } 
+	100% { opacity: 1; } 
+}
+.box{width: 100%;height: 100%;position: fixed;left: 0;top: 0;opacity: 1;
+	background: #ccc;overflow: hidden;
+}
+.bg{height: 100%;width:3840px;position: fixed;left: 0;top: 0;opacity: 1;
+	background: url(../img/bg.jpg) repeat-x bottom left;
+	background-size:3840px 652px;/**/
+	animation: run 65s linear alternate infinite;
+}
+/* 修改此处  run*/
+@-webkit-keyframes run{   
+	to{transform: translateX(-2474px);}
+}
+.over{
+	animation: overlay 1.5s 1.5s forwards;
+	background-attachment: fixed, fixed;
+	background-image: url("../img/overlay-pattern.png"),url("../img/overlay.svg");
+	background-position: left top,center center;
+	background-repeat: repeat,no-repeat;
+	background-size: auto, cover;
+	width: 100%; height: 100%;
+	position: fixed;left: 0;top: 0;
+	opacity: 0;	
+}
+@-webkit-keyframes overlay{ 
+	0% { opacity: 0; } 
+	100% { opacity: 1; } 
+}
+
+
+/* 导航csss设置 */
+.main{width: 600px;height:380px;position: absolute;left: 50%;top: 50%;
+	margin-left: -300px;margin-top: -180px;overflow: hidden;color: #fff;}
+.main p{font-size: 20px;text-align: center;margin-top: 20px;
+	animation: name 1s 2.5s forwards;opacity: 0;}
+
+.name{font-size: 90px;text-align: center;font-family: 'Microsoft YaHei';
+	position: relative;width: 100%;height: 120px;
+	animation: name 1s 2s forwards; opacity: 0;}
+
+.name b{width: 100%;height: 100%; position: absolute;left: 0;top: 0;}
+
+.name .mask{color: rgba(0,0,0,0);
+	background: -webkit-linear-gradient(-45deg,rgba(102,20,10,0) 20%,
+		rgba(155,155,255,1) 50%,rgba(20,0,110,0) 80%);
+		background-position:0px 0px;
+		-webkit-background-clip:text;
+		animation: flash 3s linear infinite;
+}
+@-webkit-keyframes flash{
+		from{background-position: -200px 0;}
+		to{background-position: 400px 0;}
+	}
+
+.list{width: 100%;height: 50%;margin-top: 20px;position: absolute;left: 0;
+bottom: 0;}
+.list li{width: 150px;height: 150px;border:2px solid #fff;border-radius: 50%;
+	margin: 10px 73px;float: left;text-align: center;opacity: 0;
+	font-size: 30px; box-shadow: 0 0 20px #fff;}
+.list li a{margin-top: 50px;display: block;font-weight: bold;color: #fff;}
+.list li:nth-child(1){
+	animation: li 1s 3s forwards;
+}
+.list li:nth-child(2){
+	animation: li 1s 3.5s forwards;
+}
+.list li:hover{background: rgba(255,255,255,0.3);}
+/* 修改此处  名称改对   上面的opcity*/
+@keyframes name{
+	0%{transform: translateY(1em);opacity: 0;}
+	100%{transform: translateY(0em);opacity: 1;}
+}
+@keyframes li{
+	0%{transform: translateY(150px);opacity: 0;}
+	100%{transform: translateY(0px);opacity: 1;}
+}

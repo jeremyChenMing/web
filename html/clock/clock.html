@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>clock</title>
+<style>
+	*{ padding:0; margin:0; list-style:none;}
+	body{background: #000;}
+	.clock{ width:400px; margin:100px auto;}
+	.clock p{ width:24px; height:35px; background:url(img/num.png); float:left;}
+	span{ float:left; line-height:35px; font-size:20px;}
+	h1{width: 400px;height: 50px;line-height: 50px;text-align: center;font-size: 50px;
+		color: #fff;font-weight: bold;
+		position: absolute;left: 27%;top: 10px;}
+</style>
+<script src="move.js"></script>
+<script>
+	function toDub(num){
+		return num<10?'0'+num:''+num;
+	}
+
+	window.onload=function(){
+		var aP=document.getElementsByTagName('p');
+		clock();
+		setInterval(clock,1000);
+		
+		function clock(){
+			var oDate=new Date();
+			var oH=oDate.getHours();
+			var oM=oDate.getMinutes();
+			var oS=oDate.getSeconds();
+			
+			var str=toDub(oH)+toDub(oM)+toDub(oS);
+			
+			for(var i=0;i<aP.length;i++){
+				move(aP[i],{'backgroundPositionY':-str.charAt(i)*35});
+			}
+		}
+	};
+</script>
+</head>
+
+<body>
+	<div class="clock">
+    	<p></p>
+        <p></p>
+        <span>:</span>
+        <p></p>
+        <p></p>
+        <span>:</span>
+        <p></p>
+        <p></p>
+    </div>
+	<h1>动态时钟</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+

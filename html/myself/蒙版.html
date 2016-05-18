@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+	*{ padding:0; margin:0; list-style:none;}
+	body,html{ height:100%;}
+	div{ height:100%; background:url(img/men.jpg); background-size:cover; -webkit-mask:url(img/yuan.png) no-repeat;}
+	
+</style>
+<script>
+	window.onload=function(){
+		var oDiv=document.querySelector('div');
+		oDiv.onmousemove=function(ev){
+			var oE=ev||event;
+			var l=oE.clientX-134;
+			var t=oE.clientY-148;
+			
+			this.style.WebkitMaskPosition=l+'px '+t+'px';
+			
+		};
+	};
+</script>
+</head>
+
+<body>
+	<div class="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+

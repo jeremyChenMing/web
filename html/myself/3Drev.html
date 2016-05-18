@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>opacity</title>
+<style type="text/css">
+	*{margin: 0;list-style: none;padding: 0;}
+	.box{width: 1200px;height: 500px;background: #ccc;margin: 50px auto;}
+	.list{width: 100%;height: 500px;background: #red;position: relative;perspective:800px;}
+	.list li{width: 300px;height: 300px;float: left;font-size: 100px;line-height: 300px;text-align: center;position: absolute;top: 50%;left: 50%;margin-left: -150px;margin-top: -150px;
+		transition: all 1s ease;
+		color: rgba(211,222,111,1);
+		}
+
+	.one{transform: translateX(-300px) rotateY(60deg);
+		background: rgba(50,150,50,0.5);}
+	.two{z-index: 1;background: rgba(160,150,180,1);}
+	.three{transform: translateX(300px) rotateY(-60deg);
+		background: rgba(200,100,200,0.5);}
+	.four{transform: translateX(400px) rotateY(-60deg);opacity: 0;}
+	.five{transform: translateX(-400px) rotateY(60deg);opacity: 0;}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var aBtn=document.querySelectorAll('input');
+		var aLi=document.querySelectorAll('li');
+		var oldClass=[];
+		for(var i=0;i<aLi.length;i++){
+			oldClass[i]=aLi[i].className;
+		}
+		
+		aBtn[0].onclick=function(){
+			oldClass.unshift(oldClass.pop());
+			console.log(oldClass)
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].className=oldClass[i];
+			}
+		};
+
+		aBtn[1].onclick=function(){
+			oldClass.push(oldClass.shift());
+			console.log(oldClass)
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].className=oldClass[i];
+			}
+		};
+	};
+</script>
+</head>
+<body>
+	<div class="box">
+		<input type="button" value="向左" />
+		<input type="button" value="向右" />
+		<ul class="list">
+			<li class="one">1</li>
+			<li class="two">2</li>
+			<li class="three">3</li>
+			<li class="four">4</li>
+			<li class="five">5</li>
+		</ul>
+	</div>
+</body>
+</html>

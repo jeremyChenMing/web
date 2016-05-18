@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>pic move</title>
+<style type="text/css">
+	*{margin: 0;padding: 0;list-style: none;}
+	.box{width: 490px;height: 490px;background: url(cat/bg.jpg) no-repeat center center; margin: 60px auto;background-size: 490px 490px;}
+	.list{width: 100%;height: 100%;}
+	.list li{width: 150px;height: 150px;float: left;margin: 10px 0 0 10px;position: relative;}
+	img{width: 150px;height: 150px;}
+	span{position: absolute;left: 0;top: 0;font-size: 30px;color: red;}
+	input{width: 100px;height: 30px;line-height: 30px;text-align: center;font-size: 20px;background: yellow;border: none;position: absolute;left: 100px;top: 100px;}
+</style>
+<script type="text/javascript" src="move.js"></script>
+<script type="text/javascript">
+
+/*碰撞检测*/
+	function coolTest(obj1,obj2){
+		var l1=obj1.offsetLeft;
+		var r1=l1+obj1.offsetWidth;
+		var t1=obj1.offsetTop;
+		var b1=t1+obj1.offsetHeight;
+
+		var l2=obj2.offsetLeft;
+		var r2=l2+obj1.offsetWidth;
+		var t2=obj2.offsetTop;
+		var b2=t2+obj1.offsetHeight;
+
+		if(l1<r2 && r1>l2 && t1<b2 && b1>t2){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+window.onload=function(){
+
+	var oUl=document.getElementById('ul');
+	var oBtn=document.getElementById('btn');
+	var aLi=oUl.children;
+	var pos=[];
+	for(var i=0;i<aLi.length;i++){
+		pos[i]={left:aLi[i].offsetLeft,top:aLi[i].offsetTop}
+	}
+
+	oBtn.onclick=function(){
+		pos.sort(function(){
+			return Math.random()-0.5;	
+		});
+		for(var i=0;i<aLi.length;i++){
+			/*aLi[i].style.left=pos[i].left+'px';
+			aLi[i].style.top=pos[i].top+'px';*/
+			move(aLi[i],pos[i])
+		}
+	};
+
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].style.left=pos[i].left+'px';
+		aLi[i].style.top=pos[i].top+'px';
+		aLi[i].style.position='absolute';
+		aLi[i].style.margin=0;
+		Drag(aLi[i]);
+		aLi[i].index=i;
+	}
+	var cX=document.documentElement.clientWidth;
+	var cY=document.documentElement.clientHeight;
+
+	function Drag(obj){
+		obj.onmousedown=function(ev){
+			var oEv=ev||event;
+			var disX=oEv.clientX-obj.offsetLeft;
+			var disY=oEv.clientY-obj.offsetTop;
+			document.onmousemove=function(ev){
+				var oEv=ev||event;
+				var l=oEv.clientX-disX;
+				var t=oEv.clientY-disY;
+				
+				if(l<0)l=0;
+				if(t<0)t=0;
+
+				if(t>(cY-150))t=cY-150;
+				if(l>(cX-150))l=cX-150;
+
+				obj.style.left=l+'px';
+				obj.style.top=t+'px';
+
+				var oNear=findNear(obj);
+				
+
+				oNear.className='on';
+			};
+			document.onmouseup=function(){
+				document.onmousemove=document.onmouseup=null;
+				obj.releaseCapture&&obj.releaseCapture();
+				var oNear=findNear(obj);
+				if(oNear){
+					/*obj.style.left=pos[oNear.index].left+'px';
+					obj.style.top=pos[oNear.index].top+'px';
+					oNear.style.left=pos[obj.index].left+'px';
+					oNear.style.top=pos[obj.index].top+'px';*/
+					move(obj,pos[oNear.index],{duration:1000,easing:Tween.Back.easeInOut});
+					move(oNear,pos[obj.index],{duration:1000,easing:Tween.Back.easeInOut});
+
+					var tmp;
+					tmp=obj.index;
+					obj.index=oNear.index;
+					oNear.index=tmp;
+				}else{
+					/*obj.style.left=pos[obj.index].left+'px';
+					obj.style.top=pos[obj.index].top+'px';*/
+					move(obj,pos[obj.index],{duration:2000,easing:Tween.Back.easeInOut})
+				}
+				
+			};
+			obj.setCapture&&obj.setCapture();
+			return false;
+		}
+	}
+
+/*找到最近的*/
+	function findNear(obj){
+		var minNum=9999;
+		var minindex=-1;
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].className='';
+			if(obj==aLi[i])continue;
+			if(coolTest(obj,aLi[i])){
+				var dis=getDis(obj,aLi[i]);
+				if(dis<minNum){
+					minNum=dis;
+					minindex=i;
+				}
+			}
+		}
+		if(minindex==-1){
+			return false;
+		}else{
+			return aLi[minindex];
+		}
+	}
+	function getDis(obj1,obj2){
+		var l1=obj1.offsetLeft+obj1.offsetWidth/2;
+		var t1=obj1.offsetTop+obj1.offsetHeight/2;
+
+		var l2=obj2.offsetLeft+obj2.offsetWidth/2;
+		var t2=obj2.offsetTop+obj2.offsetHeight/2;
+
+		var a=l2-l1;
+		var b=t2-t1;
+		var c=Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+		return c;
+	}
+
+};
+
+</script>
+</head>
+<body style="background: #000;">
+	<input type="button" value="随机换位置" id="btn" />
+	<div class="box">
+		<ul class="list" id="ul">
+			<li><img src="cat/1.jpg" /></li>
+			<li><img src="cat/2.jpg" /></li>
+			<li><img src="cat/3.jpg" /></li>
+			<li><img src="cat/4.jpg" /></li>
+			<li><img src="cat/5.jpg" /></li>
+			<li><img src="cat/6.jpg" /></li>
+			<li><img src="cat/7.jpg" /></li>
+			<li><img src="cat/8.jpg" /></li>
+			<li><img src="cat/9.jpg" /></li>
+		</ul>
+	</div>
+</body>
+</html>
