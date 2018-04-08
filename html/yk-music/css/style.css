@@ -5,7 +5,7 @@
 a:hover{color:#ef3f22;}
 
 
-.logo{width:140px;height:50px;text-indent:-999em;background:url(../img/yklogo.png);}
+.logo{width:140px;height:50px;text-indent:-999em;background:url(/html/yk-music/img/yklogo.png);}
 .logo a{display:block;width:140px;height:50px;}
 
 .header_top_list1{margin-left:10px;}
@@ -14,7 +14,7 @@ a:hover{color:#ef3f22;}
 .list1_fist a{line-height:50px;}
 
 .pindao_bg{width:16px;height:15px;
-		background:url(../img/header.png) -42px -2px;
+		background:url(/html/yk-music/img/header.png) -42px -2px;
 		margin:0 5px 0 15px;
 		}
 .pindao{padding-top:18px;
@@ -30,7 +30,7 @@ a:hover{color:#ef3f22;}
 	}
 .dingwei_jiao{width:22px;height:12px;
 	position:absolute;top:-12px;left:90px;
-	background:url(../img/header.png) -95px -143px;	
+	background:url(/html/yk-music/img/header.png) -95px -143px;	
 	}
 .dl_left{border-right:1px dashed #ddd; padding-top:9px;height:141px;}
 .dl_right{padding-top:9px;height:141px;margin-left:20px;}
@@ -45,15 +45,15 @@ a:hover{color:#ef3f22;}
 #show_download a{float:left;width:130px;font-size:14px;margin-bottom:14px;}
 #show_download i{margin-right:10px;}
 #download_show{position:relative;}
-.chuangzuo_bg{width:16px;height:16px;background:url(../img/header.png) -2px -22px;}
+.chuangzuo_bg{width:16px;height:16px;background:url(/html/yk-music/img/header.png) -2px -22px;}
 a:hover .chuangzuo_bg{background-position:-62px -22px;}
-.myself_bg{width:16px;height:16px;background:url(../img/header.png) -22px -2px;}
+.myself_bg{width:16px;height:16px;background:url(/html/yk-music/img/header.png) -22px -2px;}
 a:hover .myself_bg{background-position:-82px -2px;}
-.shuju_bg{width:16px;height:16px;background:url(../img/header.png) -42px -42px;}
+.shuju_bg{width:16px;height:16px;background:url(/html/yk-music/img/header.png) -42px -42px;}
 a:hover .shuju_bg{background-position:-102px -42px;}
-.jiayou_bg{width:16px;height:16px;background:url(../img/header.png) -2px -82px;}
+.jiayou_bg{width:16px;height:16px;background:url(/html/yk-music/img/header.png) -2px -82px;}
 a:hover .jiayou_bg{background-position:-62px -82px;}
-.pc_bg{width:16px;height:16px;background:url(../img/header.png) -22px -82px;}
+.pc_bg{width:16px;height:16px;background:url(/html/yk-music/img/header.png) -22px -82px;}
 a:hover .pc_bg{background-position:-82px -82px;}
 
 
@@ -66,12 +66,12 @@ a:hover .pc_bg{background-position:-82px -82px;}
 .search_btn{display:block;}
 
 .login{color:#555;font-size:14px;padding-top:18px;height:32px;}
-.login_bg{width:16px;height:16px;background:url(../img/header.png) -2px -2px;margin-right:4px;}
+.login_bg{width:16px;height:16px;background:url(/html/yk-music/img/header.png) -2px -2px;margin-right:4px;}
 .login:hover .login_bg{background-position:-62px -2px;}
 a:hover .download_bg{background-position:-102px -22px;} 
-.download_bg{width:16px;height:16px;background:url(../img/header.png) -42px -22px;}
+.download_bg{width:16px;height:16px;background:url(/html/yk-music/img/header.png) -42px -22px;}
 .download_bg2{width:8px;height:4px;
-	background:url(../img/header.png) -120px -4px;
+	background:url(/html/yk-music/img/header.png) -120px -4px;
 	margin:5px 20px 0 5px;transition:transform 1s linear;
 	}
 .download:hover .download_bg2{transform:rotate(180deg);}
@@ -110,25 +110,25 @@ a:hover .download_bg{background-position:-102px -22px;}
 	}
 
 .user_bg{width:20px;height:20px;
-	background:url(../img/icon.png) 0 -26px;
+	background:url(/html/yk-music/img/icon.png) 0 -26px;
 	}
 .shoucang_bg{width:20px;height:20px;
-	background:url(../img/icon.png) -21px -26px;
+	background:url(/html/yk-music/img/icon.png) -21px -26px;
 	}
 .jilv_bg{width:20px;height:20px;
-	background:url(../img/icon.png) -42px -26px;
+	background:url(/html/yk-music/img/icon.png) -42px -26px;
 	}
 .dingyue_bg{width:20px;height:20px;
-	background:url(../img/icon.png) -63px -26px;
+	background:url(/html/yk-music/img/icon.png) -63px -26px;
 	}
 .tongzhi_bg{width:20px;height:20px;
-	background:url(../img/icon.png) -84px -26px;
+	background:url(/html/yk-music/img/icon.png) -84px -26px;
 	}
 .huiyuan_bg{width:20px;height:20px;
-	background:url(../img/icon.png) -105px -26px;
+	background:url(/html/yk-music/img/icon.png) -105px -26px;
 	}
 .buycar_bg{width:24px;height:23px;
-	background:url(../img/icon.png) -126px -26px;
+	background:url(/html/yk-music/img/icon.png) -126px -26px;
 	}
 .buycar{margin:0 -3px;}
 
@@ -136,12 +136,12 @@ a:hover .download_bg{background-position:-102px -22px;}
 	right:35px;top:400px;	
 	width:85px;
 	height:155px;
-	background:url(../img/icon.png) 0 -88px;
+	background:url(/html/yk-music/img/icon.png) 0 -88px;
 	}
 .guanbi{position:absolute;
 	width:11px;
 	height:11px;
-	background:url(../img/icon.png) 0 -88px;
+	background:url(/html/yk-music/img/icon.png) 0 -88px;
 	}
 #content{ position:absolute; left:0; top:0; }
 .content1{margin-top:23px;position:relative; width:970px; height:410px; overflow:hidden; }
@@ -149,7 +149,7 @@ a:hover .download_bg{background-position:-102px -22px;}
 .content1 li { float:left; }
 .opa{
 	width:756px;height:104px;
-	background:url(../img/opa.png);
+	background:url(/html/yk-music/img/opa.png);
 	line-height:104px;
 	font-size:30px;
 	color:#fff;
@@ -164,7 +164,7 @@ a:hover .download_bg{background-position:-102px -22px;}
 	text-align:center;
 	}
 .opa2 a{ float:left;width:10px;height:10px;
-	background:url(../img/icon.png) -91px 0;
+	background:url(/html/yk-music/img/icon.png) -91px 0;
 	margin:7px 10px 0 0;}
 
 .opa2 a.active{background-position:-78px 0;}
@@ -174,14 +174,14 @@ a:hover .download_bg{background-position:-102px -22px;}
 	position:absolute;
 	right:0;top:50%;
 	margin-top:-17px;
-	background:url(../img/icon.png) 0 -48px;
+	background:url(/html/yk-music/img/icon.png) 0 -48px;
 	}
 .opa_right{
 	width:18px;height:34px;
 	position:absolute;
 	left:0;top:50%;
 	margin-top:-17px;
-	background:url(../img/icon.png) -20px -48px;
+	background:url(/html/yk-music/img/icon.png) -20px -48px;
 	}
 .cont2{
 	margin:20px 0 41px;	
@@ -251,12 +251,12 @@ a:hover .download_bg{background-position:-102px -22px;}
 	}
 .play{
 	width:12px;height:12px;
-	background:url(../img/icon.png) -104px 0;
+	background:url(/html/yk-music/img/icon.png) -104px 0;
 	margin-right:4px;
 	}
 .liuyan{
 	width:12px;height:12px;
-	background:url(../img/icon.png) -117px 0;
+	background:url(/html/yk-music/img/icon.png) -117px 0;
 	margin:0 4px 0 10px;
 	}
 .block{display:block;}

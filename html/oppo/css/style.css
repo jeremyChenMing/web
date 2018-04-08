@@ -3,9 +3,9 @@
 .header_top{height:37px;background:#2b2b2b;border-top:3px solid #00925f;}
 .wid1180{width:1180px;margin:0 auto;font-family:"Microsoft Yahei";}
 .header_top1{padding-top:10px;}
-.sina{width:21px;height:17px;background:url(../img/icons.png) no-repeat left -882px;margin-right:15px;}
+.sina{width:21px;height:17px;background:url(/html/oppo/img/icons.png) no-repeat left -882px;margin-right:15px;}
 .sina:hover{background-position:-144px -882px;}
-.weibo{width:21px;height:20px;background:url(../img/icons.png) no-repeat left -910px;}
+.weibo{width:21px;height:20px;background:url(/html/oppo/img/icons.png) no-repeat left -910px;}
 .weibo:hover{background-position:-144px -910px;}
 .num{color:#00925f;font-weight:bold;padding:3px 0 0 15px;}
 
@@ -13,7 +13,7 @@
 .loginbar a{float:left;padding:3px 15px 1px 15px;border-right:1px solid #474747;
 		color:#b2b2b2;}
 .loginbar a:hover{color:#00925f;}
-.loginbar .buycar{background:url(../img/icons.png) no-repeat left -1014px;
+.loginbar .buycar{background:url(/html/oppo/img/icons.png) no-repeat left -1014px;
 			margin:2px 0 0 15px;padding-left:27px;border:0;}
 .buybox{width:105px;height:27px;border-right:1px solid #474747;margin-top:-2px;
 		position:relative;}
@@ -26,7 +26,7 @@
  
   /* nav start */
 .header_btn{height:85px;}
-.logo{background:url(../img/logo.png) no-repeat;width:170px;height:65px;
+.logo{background:url(/html/oppo/img/logo.png) no-repeat;width:170px;height:65px;
 		text-indent:-999em;}
 .logo a{display:block;width:170px;height:65px;}
 .nav{padding:39px 0 34px;}
@@ -35,7 +35,7 @@
  /* nav end */
  
   /* content_top start */
- .content_top{background:url(../img/shuai.jpg) repeat-x top center;
+ .content_top{background:url(/html/oppo/img/shuai.jpg) repeat-x top center;
  	height:630px;position:relative;}
 .opa_top{height:3px;width:100%;position:absolute;top:0;left:0;
 		background:#000;opacity:0.3;filter:alpha(opacity:30);}
@@ -43,11 +43,11 @@
 		background:#fff;opacity:0.5;filter:alpha(opacity:50);}
 /* 定位元素样式 */
 .abs_box{position:relative;}
-.big_bg{background:url(../img/dingwei.png) no-repeat center;
+.big_bg{background:url(/html/oppo/img/dingwei.png) no-repeat center;
 		display:block;}
 .change{width:100%;height:70px;position:absolute;left:0;bottom:0;}
 .change_bg{display:block;width:15px;height:15px;float:left;
-		background:url(../img/icons.png) no-repeat -303px -929px;
+		background:url(/html/oppo/img/icons.png) no-repeat -303px -929px;
 		position:absolute;}
 .ch_1{top:50%;left:50%;margin-top:-8px;margin-left:-32px;}
 .ch_2{top:50%;left:50%;margin-top:-8px;margin-left:-8px;}
@@ -75,13 +75,13 @@
 .phone{margin-right:-20px;margin-top:42px;}
 .phone_list{width:280px;border-right:1px solid #eaeaea;padding-right:10px;text-align:center;float:left;margin-right:9px;}
 .phone_pic{position:relative;display:block;}
-.phone_pic .pic_btn{position:absolute;bottom:-15px;left:0;width:280px;height:15px;background:url(../img/pic-s.png);}
+.phone_pic .pic_btn{position:absolute;bottom:-15px;left:0;width:280px;height:15px;background:url(/html/oppo/img/pic-s.png);}
 .phone_mas{width:280px;border-bottom:5px solid #dfdfdf;padding-bottom:28px;}
 .name{font-size:18px;color:#2b2b2b;margin:42px 0 15px 0;font-weight:bold;}
 .address{color:#b4b4b4;margin-bottom:15px;}
 .price{color:#00925f;}
 .price a{color:#00925f;padding-left:10px;}
-.jiao{display:inline-block;width:13px;height:13px;background:url(../img/icons.png) no-repeat -177px -1014px;
+.jiao{display:inline-block;width:13px;height:13px;background:url(/html/oppo/img/icons.png) no-repeat -177px -1014px;
 	position:relative;top:2px;margin-left:10px;}
 .phone .li_last{border:none;}
 /*第二部分内容样式 end*/
@@ -103,18 +103,18 @@
 .pin_rt{width:270px;height:265px;padding:5px;background:#fff;text-align:center;border-bottom:5px solid #eaeaea;}
 .pin_rt:hover{background:#eaeaea;}
 .all_pj{background:#fff;color:#576267;font-weight:bold;padding:23px 0 24px;}
-.li1{background:url(../img/icons.png) no-repeat -135px -354px; width:16px;height:18px;}
+.li1{background:url(/html/oppo/img/icons.png) no-repeat -135px -354px; width:16px;height:18px;}
 .list_1:hover .li1{background-position:-374px -354px;}
-.li2{background:url(../img/icons.png) no-repeat -135px -393px; width:16px;height:18px;}
+.li2{background:url(/html/oppo/img/icons.png) no-repeat -135px -393px; width:16px;height:18px;}
 .list_1:hover .li2{background-position:-374px -393px;}
-.li3{background:url(../img/icons.png) no-repeat -135px -430px; width:16px;height:18px;}
+.li3{background:url(/html/oppo/img/icons.png) no-repeat -135px -430px; width:16px;height:18px;}
 .list_1:hover .li3{background-position:-374px -430px;}
 
-.li4{background:url(../img/icons.png) no-repeat -248px -354px; width:16px;height:18px;}
+.li4{background:url(/html/oppo/img/icons.png) no-repeat -248px -354px; width:16px;height:18px;}
 .list_1:hover .li4{background-position:-487px -354px;}
-.li5{background:url(../img/icons.png) no-repeat -248px -392px; width:16px;height:18px;}
+.li5{background:url(/html/oppo/img/icons.png) no-repeat -248px -392px; width:16px;height:18px;}
 .list_1:hover .li5{background-position:-487px -392px;}
-.li6{background:url(../img/icons.png) no-repeat -249px -430px; width:16px;height:18px;}
+.li6{background:url(/html/oppo/img/icons.png) no-repeat -249px -430px; width:16px;height:18px;}
 .list_1:hover .li6{background-position:-488px -430px;}
 .pj_list a b{padding:3px 0 0 8px;color:#b2b2b2;}
 .list_1:hover b{color:#00925f;}
@@ -159,13 +159,13 @@
 /*底部样式*/
 .footer_top{padding-bottom:7px;border-bottom:1px solid #eaeaea;}
 .hig118{height:118px;overflow:hidden;}
-.fot_pic{margin:-541px 0 0 -244px;background:url(../img/icons.png) -243px -540px;}
+.fot_pic{margin:-541px 0 0 -244px;background:url(/html/oppo/img/icons.png) -243px -540px;}
 .footer_m{padding:30px 0 50px;}
 .fot_d dt{font-weight:bold;color:#373737;font-size:14px;margin-bottom:22px;width:188px;}
 .fot_d dd{position:relative;margin-bottom:17px;}
 .fot_d dd a{color:#838383;padding-left:9px;}
 .fot_d dd a:hover{color:#00925f;}
-dd i{background:url(../img/icons.png) no-repeat -330px -1017px;
+dd i{background:url(/html/oppo/img/icons.png) no-repeat -330px -1017px;
 		width:3px;height:3px;
 		position:absolute;left:0;top:5px;} 
 dd .sina,dd .weibo{margin-top:-8px;}
@@ -173,9 +173,9 @@ dd .sina,dd .weibo{margin-top:-8px;}
 .dd_last a:hover .sina{background-position:-144px -882px;}
 .dd_last a:hover .weibo{background-position:-144px -910px;}
 .renren{width:20px;height:18px;position:absolute;left:0;top:0;
-		background:url(../img/icons.png) left -938px;}
+		background:url(/html/oppo/img/icons.png) left -938px;}
 .qqkj{width:20px;height:18px;position:absolute;left:0;top:0;
-		background:url(../img/icons.png) left -854px;}
+		background:url(/html/oppo/img/icons.png) left -854px;}
 a:hover .renren{background-position:-144px -938px;}
 a:hover .qqkj{background-position:-144px -854px;}
 /*尾部下面样式*/
@@ -183,7 +183,7 @@ a:hover .qqkj{background-position:-144px -854px;}
 .fot_bl{color:#828282;}
 .fot_bl i{width:100px;height:16px;
 		float:left;
-		background:url(../img/icons.png) -440px top;}
+		background:url(/html/oppo/img/icons.png) -440px top;}
 .fot_bl span{float:left;margin-left:21px;}
 .fot_br a{color:#e2e2e2;padding:0 20px;}
 .fot_br a:hover{color:#00925f;}
