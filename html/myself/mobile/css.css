@@ -8,14 +8,14 @@
 	font-size: 1rem;
 }
 .head p{
-	background: url(/html/myself/mobile/img/intro.png) no-repeat center;width: 3.175rem;height: 1.55rem;
+	background: url(img/intro.png) no-repeat center;width: 3.175rem;height: 1.55rem;
 	position: absolute;left: .5rem;bottom: 0.5rem;background-size: 100% 100%;
 }
 .change{
 	width: 16rem;height: 100%;text-align: center;position: relative;
 }
 .change .pic{
-	width: 16rem;height: 6.725rem;background: url(/html/myself/mobile/img/pic.png) no-repeat center center;
+	width: 16rem;height: 6.725rem;background: url(img/pic.png) no-repeat center center;
 	background-size: 100% 100%;
 }
 .change .btn{
@@ -106,7 +106,7 @@
 }
 .content span{
 	width: 2.3rem;height: 0.7rem;display: block;font-size: 0.7rem;line-height: 0.7rem;color: red;
-	float: right;background: url(/html/myself/mobile/img/arr.png) no-repeat right center;background-size: 0.325rem 0.55rem;
+	float: right;background: url(img/arr.png) no-repeat right center;background-size: 0.325rem 0.55rem;
 	margin: 1rem 0.5rem 0 0;
 }
 
@@ -142,7 +142,7 @@
 }
 .name .next{
 	position: absolute;right: 0.5rem;bottom: 0.5rem;width: 0.325rem;height: 0.55rem;
-	background: url(/html/myself/mobile/img/arr.png);background-size:100% 100%; 
+	background: url(img/arr.png);background-size:100% 100%; 
 }
 
 
@@ -177,6 +177,6 @@
 }
 .top{
 	position: absolute;right: 0rem;top: 0.75rem;width: 2.65rem;height: 0.7rem;font-size: 0.7rem;
-	background: url(/html/myself/mobile/img/jian.png) no-repeat 1.5rem center;
+	background: url(img/jian.png) no-repeat 1.5rem center;
 	background-size: 0.425rem 0.225rem;
 }
