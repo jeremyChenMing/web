@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>LOVE</title>
+	<title>HTML5浪漫爱心表白动画在线演示</title>
 	<style type="text/css">
 	/*@font-face {
 		font-family: digit;
@@ -10,10 +10,11 @@
 	}*/
 	</style>
 
-	<link href="./dist/default.min.css" type="text/css" rel="stylesheet">
+	<link href="./css/default.css" type="text/css" rel="stylesheet">
 	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="./dist/garden.min.js"></script>
-	<script type="text/javascript" src="./dist/function.min.js"></script>
+	<script type="text/javascript" src="./js/garden.js"></script>
+	<script type="text/javascript" src="./js/function.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
 </head>
 <body>
 	<div id="box">
@@ -46,7 +47,7 @@
 					<br>
 					<br>
 					I want to say:<br />
-					<span class="keywords">Baby, I love you forever;</span><br />
+					<span class="keywords">Baby, I love you forever!!!</span><br />
 				</div>
 				<div id="loveHeart">
 					<canvas id="garden"></canvas>
@@ -61,6 +62,11 @@
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div id="lastTxt">
+				<!-- <span class="prev">I want to say again:</span><br /> -->
+				<span class="keywordbig">Baby, loving you!!!</span><br />
 			</div>
 		</div>
 	</div>
@@ -85,17 +91,23 @@
 		$("#copyright").css("bottom", "10px");
 		document.execCommand("stop");
 	} else {
-		setTimeout(function () {
-			startHeartAnimation();
-		}, 5000);
 
-		timeElapse(together);
-		setInterval(function () {
+		function loopp() {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 50000);
+			// 每一秒算一次时间间隔
 			timeElapse(together);
-		}, 1000);
-
-		adjustCodePosition();
-		$("#code").typewriter();
+			setInterval(function () {
+				timeElapse(together);
+			}, 1000);
+			// 调整布局
+			adjustCodePosition();
+			// 打字效果
+			$("#code").typewriter();
+		}
+		loopp();
+		// $("#lastTxt").typewriter();
 	}
 	</script>
 
